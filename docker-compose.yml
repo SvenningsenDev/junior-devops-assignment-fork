@@ -1,5 +1,17 @@
 services:
   web:
-    build: .
+    build: . # I am keeping this during development. Should point to an image in production
+    # environment:
+    #   - PORT=8080
+    #   - REDIS_URL=redis://redis:6379        This was my first fix, which worked. (then I saw that it was still looking for a .env) so I j mount that instead
+    volumes:
+      - ./.env:/app/.env
     ports:
-      - "8080:80"
+      - "8080:8080"
+    depends_on:
+      - redis
+  
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
