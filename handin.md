@@ -58,3 +58,34 @@ While I have created the deployment file, I have not been able to test it, as th
 
 ## Actions status
 [![Go](https://github.com/SvenningsenDev/junior-devops-assignment-fork/actions/workflows/go.yml/badge.svg)](https://github.com/SvenningsenDev/junior-devops-assignment-fork/actions/workflows/go.yml)
+
+## Thoughts and Considerations
+
+This assignment has deepened my understanding of DevOps practices and tools. Here are my main takeaways:
+
+1. Docker and Containerization
+  - While I was already familiar with basic Docker concepts, this assignment helped reinforce my understanding
+  - Gained more experience with multi-container setups using Docker Compose
+  - Better understood how environment variables and networking work between containers
+
+2. GitHub Actions
+  - Implemented basic CI pipeline for Go application
+  - Learned how automated testing can catch issues before deployment
+  - Experienced how CI helps maintain code quality
+
+3. Kubernetes
+  - Got introduced to container orchestration concepts
+  - Learned about Deployments, Pods, and Services
+  - Understanding how labels connect different Kubernetes resources
+
+Challenges Faced:
+- Initially struggled with environment variables and Redis connection (until I realized that I needed the .env file sintead of explicitly adding variables to the container)
+- Understanding the relationship between Docker Compose and Kubernetes configurations
+- Learning when to use different Kubernetes resources
+
+Areas for Future Learning:
+- Deeper understanding of Kubernetes configurations and best practices
+- Implementing more comprehensive CI/CD pipelines
+- Working with different deployment strategies
+
+Overall, this assignment helped bridge the gap between my Docker knowledge and modern orchestration tools, while providing valuable experience with CI/CD practices.
