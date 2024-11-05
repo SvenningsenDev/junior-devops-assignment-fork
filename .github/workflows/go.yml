@@ -25,8 +25,13 @@ jobs:
       run: |
         cd src
         go mod download
+
+    - name: Test
+      run: |
+        cd src/tests
+        go test -v
   
-    - name: Build Test
+    - name: Build
       run: |
         cd src
         go build -v -o main main.go
