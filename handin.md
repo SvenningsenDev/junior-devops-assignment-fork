@@ -56,4 +56,4 @@ While I have created the deployment file, I have not been able to test it, as th
 4. http://localhost:8080
 
 ## Actions status
-![Go](https://github.com/SvenningsenDev/junior-devops-assignment-fork/actions/workflows/go.yml/badge.svg)
+[![Go](https://github.com/SvenningsenDev/junior-devops-assignment-fork/actions/workflows/go.yml/badge.svg)](https://github.com/SvenningsenDev/junior-devops-assignment-fork/actions/workflows/go.yml)
