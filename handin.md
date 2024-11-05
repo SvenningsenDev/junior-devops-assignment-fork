@@ -27,6 +27,7 @@
    - Added github actions to the project. /.github/workflows/go.yml
    - Slightly modified the "Go" template to use the same go version as the container,
    and points to the main.go for the build.
+   - Added specific path for caching dependencies, as gh actions always looks in root for go.sum and go.mod. For this reason I set the working dir to be src.
    - Added the singular unit test to also run in the CI process.
 
 7. K8s
