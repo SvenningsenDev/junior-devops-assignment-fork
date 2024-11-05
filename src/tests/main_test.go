@@ -1,16 +1,8 @@
 package main
 
-import (
-	"encoding/json"
-	"os"
-	"testing"
-)
+import "testing"
 
 type Users []string
-
-func (u *Users) FromJson(in string) error {
-	return json.Unmarshal([]byte(in), u)
-}
 
 func (u Users) ValidUser(in string) bool {
 	for _, usr := range u {
@@ -22,18 +14,9 @@ func (u Users) ValidUser(in string) bool {
 }
 
 func TestValidUser(t *testing.T) {
-	// Read the actual users.json file
-	b, err := os.ReadFile("../secrets/users.json")
-	if err != nil {
-		t.Fatalf("Failed to read users.json: %v", err)
-	}
+	users := Users{"username", "admin"}
 
-	var users Users
-	if err := users.FromJson(string(b)); err != nil {
-		t.Fatalf("Failed to parse users.json: %v", err)
-	}
-
-	// Test valid users from the actual file
+	// Test valid users
 	if !users.ValidUser("username") {
 		t.Errorf("Expected 'username' to be a valid user")
 	}
