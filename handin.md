@@ -22,6 +22,8 @@
 
 5. Test
    - Added a simple unit test for ValidUser() with custom users (since users.json is not on git)
+   - Navigate to src/tests
+   - Run `go test -v`
 
 6. CI
    - Added github actions to the project. /.github/workflows/go.yml
@@ -29,6 +31,11 @@
    and points to the main.go for the build.
    - Added specific path for caching dependencies, as gh actions always looks in root for go.sum and go.mod. For this reason I set the working dir to be src.
    - Added the singular unit test to also run in the CI process.
+   - The GitHub Actions workflow  performs:
+   1. Sets up Go 1.22.7
+   2. Downloads dependencies
+   3. Runs unit tests
+   4. Builds the application
 
 7. K8s
    - Added deployment configuration in /k8s/deployment.yml
@@ -47,3 +54,6 @@ While I have created the deployment file, I have not been able to test it, as th
    bash:
    docker compose up
 4. http://localhost:8080
+
+## Actions status
+![Go](https://github.com/SvenningsenDev/junior-devops-assignment-fork/actions/workflows/go.yml/badge.svg)
