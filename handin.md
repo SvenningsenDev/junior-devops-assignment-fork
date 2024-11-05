@@ -13,7 +13,7 @@
 
 ## How to Run
 
-1. Make sure the .env file is in the root directory
+1. Create the .env file in the root directory. Give values to the variables seen in .env.example. (In this case port = 8080 and redis url = redis://redis:6379)
 2. Create a users.json file in src/secrets. Inside put a list of strings of the accepted usernames. e.g: ["admin", "username"]
 2. Run the application:
    ```bash
