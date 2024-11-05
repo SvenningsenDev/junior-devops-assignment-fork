@@ -22,8 +22,9 @@
 
 5. Test
    - Added a simple unit test for ValidUser() with custom users (since users.json is not on git)
-   - Navigate to src/tests
-   - Run `go test -v`
+   - To run tests locally:
+   1. Navigate to src/tests
+   2. Run `go test -v`
 
 6. CI
    - Added github actions to the project. /.github/workflows/go.yml
@@ -51,7 +52,7 @@ While I have created the deployment file, I have not been able to test it, as th
 1. Create the .env file in the root directory. Give values to the variables seen in .env.example. (In this case port = 8080 and redis url = redis://redis:6379)
 2. Create a users.json file in src/secrets. Inside put a list of strings of the accepted usernames. e.g: ["admin", "username"]
 3. Run the application:
-   bash:
+   ```bash
    docker compose up
 4. http://localhost:8080
 
