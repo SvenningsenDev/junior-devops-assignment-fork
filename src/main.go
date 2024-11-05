@@ -53,7 +53,7 @@ func handleConnections(w http.ResponseWriter, r *http.Request) {
 	}
 
 	for {
-		var msgdfhdf ChatMessage
+		var msg ChatMessage
 		// Read in a new message
 		err := ws.ReadJSON(&msg)
 		if err != nil {
